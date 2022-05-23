@@ -1,0 +1,34 @@
+<!-- <div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <form class="col-6">
+      <div class="form-group">
+        <input type="text" class="form-control" 
+            id="formGroupExampleInput" placeholder="Buscar..."
+            [(ngModel)]="termino"
+            (input)="teclaPresionada()"
+            name="termino">
+      </div>
+    </form>   
+  </div>
+</div> -->
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let product of lstProduct">
+      <div class="card mb-4 shadow-sm">
+        <img [src]="product.image" alt="">
+        <div class="card-body">
+          <p class="card-text"><b>{{product.name}}</b></p>
+          <p class="card-text">{{product.description}}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary" (click)=addCart(product)>Agregar carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
